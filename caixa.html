@@ -1,19 +1,26 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abrir Caixa</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSGO Skins Fun</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header><h1>Simulador de Caixa</h1></header>
-  <main>
-    <div id="roleta">Clique para girar</div>
-    <button onclick="girarRoleta()">Abrir Caixa</button>
-    <br><br>
-    <a href="index.html">Voltar</a> | <a href="inventario.html">Ver Inventário</a>
-  </main>
-  <script src="assets/js/main.js"></script>
+  <h1>Escolha uma Caixa</h1>
+  <div class="cases">
+    <a href="caixa.html?case=hydra">
+      <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/operation_hydra.png" alt="Hydra">
+      <p>Operation Hydra Case</p>
+    </a>
+    <a href="caixa.html?case=chroma3">
+      <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/chroma_3.png" alt="Chroma 3">
+      <p>Chroma 3 Case</p>
+    </a>
+  </div>
+  <footer>
+    <a href="inventario.html">Ver Inventário</a>
+  </footer>
 </body>
 </html>
