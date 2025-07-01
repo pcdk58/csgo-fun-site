@@ -1,26 +1,70 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSGO Skins Fun</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSGOSKINS - Clone Fun</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Escolha uma Caixa</h1>
-  <div class="cases">
-    <a href="caixa.html?case=hydra">
-      <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/operation_hydra.png" alt="Hydra">
-      <p>Operation Hydra Case</p>
-    </a>
-    <a href="caixa.html?case=chroma3">
-      <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/chroma_3.png" alt="Chroma 3">
-      <p>Chroma 3 Case</p>
-    </a>
-  </div>
-  <footer>
-    <a href="inventario.html">Ver Inventário</a>
-  </footer>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">CSGOSKINS</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Abrir Caixas</a></li>
+                    <li><a href="#">Inventário</a></li>
+                    <li><a href="#">Mercado</a></li>
+                    <li><a href="#">Recarregar</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h2>Abra Caixas Exclusivas de CS2</h2>
+                <p>As melhores skins e facas esperam por você!</p>
+                <button class="btn-primary">Comece a Abrir!</button>
+            </div>
+        </section>
+
+        <section class="featured-cases">
+            <div class="container">
+                <h3>Caixas em Destaque</h3>
+                <div class="case-grid">
+                    <div class="case-item">
+                        <img src="https://via.placeholder.com/150/000000/FFFFFF?text=Caixa+1" alt="Caixa 1">
+                        <h4>Caixa da Fortuna</h4>
+                        <p>R$ 9.99</p>
+                    </div>
+                    <div class="case-item">
+                        <img src="https://via.placeholder.com/150/000000/FFFFFF?text=Caixa+2" alt="Caixa 2">
+                        <h4>Caixa Lendária</h4>
+                        <p>R$ 19.99</p>
+                    </div>
+                    <div class="case-item">
+                        <img src="https://via.placeholder.com/150/000000/FFFFFF?text=Caixa+3" alt="Caixa 3">
+                        <h4>Caixa de Elite</h4>
+                        <p>R$ 29.99</p>
+                    </div>
+                    <div class="case-item">
+                        <img src="https://via.placeholder.com/150/000000/FFFFFF?text=Caixa+4" alt="Caixa 4">
+                        <h4>Caixa Secreta</h4>
+                        <p>R$ 49.99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CSGOSKINS Clone. Apenas para diversão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
