@@ -1,225 +1,90 @@
-/* Estilos Gerais */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a; /* Cor de fundo escura */
-    color: #f0f0f0; /* Cor do texto principal */
-    line-height: 1.6;
-}
+/* ... (Seus estilos CSS existentes) ... */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Cabeçalho */
-.header {
-    background-color: #2a2a2a; /* Cor mais escura para o cabeçalho */
-    padding: 20px 0;
-    border-bottom: 1px solid #444;
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #ffc107; /* Cor amarela/dourada para o logo */
-    margin: 0;
-}
-
-.nav ul {
-    display: flex;
-    gap: 30px;
-}
-
-.nav a {
-    font-size: 1.1em;
-    font-weight: 700;
-    color: #e0e0e0;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    color: #ffc107; /* Cor amarela/dourada ao passar o mouse */
-}
-
-/* Conteúdo Principal */
-.main-content {
-    padding: 40px 0;
-}
-
-/* Seção Hero (Destaque) */
-.hero {
-    background: linear-gradient(to right, #3a3a3a, #1a1a1a); /* Gradiente para o hero */
-    text-align: center;
-    padding: 80px 20px;
-    margin-bottom: 40px;
+/* Estilos da Roleta */
+.case-roulette-container {
+    width: 100%;
+    max-width: 800px; /* Largura máxima da roleta */
+    height: 120px; /* Altura da área visível da roleta */
+    background-color: #2a2a2a;
+    border: 2px solid #ffc107;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 40px auto 20px auto; /* Centraliza e adiciona margens */
+    overflow: hidden; /* Importante para esconder as skins fora da visualização */
+    position: relative; /* Para posicionar a linha indicadora */
 }
 
-.hero h2 {
-    font-size: 3.5em;
-    margin-bottom: 15px;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 1.4em;
-    margin-bottom: 30px;
-    color: #d0d0d0;
-}
-
-.btn-primary {
-    background-color: #ffc107; /* Botão primário amarelo */
-    color: #2a2a2a;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: 700;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: #e0a800; /* Escurece o amarelo ao passar o mouse */
-    transform: translateY(-2px);
-}
-
-/* Seção de Caixas em Destaque */
-.featured-cases {
-    text-align: center;
-    padding-bottom: 60px;
-}
-
-.featured-cases h3 {
-    font-size: 2.8em;
-    margin-bottom: 40px;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-.featured-cases h3::after {
-    content: '';
+.roulette-line {
     position: absolute;
-    width: 60%;
-    height: 3px;
-    background-color: #ffc107;
-    left: 20%;
-    bottom: -10px;
+    left: 50%; /* Centraliza a linha */
+    top: 0;
+    width: 4px; /* Espessura da linha */
+    height: 100%;
+    background-color: #ffffff; /* Cor da linha */
+    z-index: 10; /* Garante que a linha fique por cima das skins */
+    transform: translateX(-50%); /* Ajusta para centralizar exatamente */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Efeito de brilho */
 }
 
-.case-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    justify-content: center;
+.roulette-track {
+    display: flex; /* Para as skins ficarem uma ao lado da outra */
+    height: 100%;
+    /* As animações de transformação serão aplicadas aqui via JS */
+    transition: transform 6s cubic-bezier(0.2, 0.8, 0.7, 1); /* Animação suave */
 }
 
-.case-item {
-    background-color: #2a2a2a;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.case-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.case-item img {
-    max-width: 100%;
-    height: auto;
+.roulette-item {
+    min-width: 100px; /* Largura de cada item na roleta */
+    height: 100px; /* Altura de cada item */
+    background-color: #3a3a3a;
+    border: 1px solid #4a4a4a;
     border-radius: 5px;
-    margin-bottom: 15px;
-    border: 2px solid #ffc107; /* Borda amarela nas imagens das caixas */
-}
-
-.case-item h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ffc107;
-}
-
-.case-item p {
-    font-size: 1.1em;
-    color: #e0e0e0;
-    font-weight: 700;
-}
-
-/* Rodapé */
-.footer {
-    background-color: #2a2a2a;
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box; /* Para padding não aumentar a largura total */
+    margin: 0 5px; /* Espaçamento entre os itens */
     text-align: center;
-    border-top: 1px solid #444;
-    font-size: 0.9em;
-    color: #888;
+    font-size: 0.8em;
+    flex-shrink: 0; /* Impede que os itens encolham */
 }
 
-/* Responsividade Básica */
+.roulette-item img {
+    max-width: 70px; /* Tamanho da imagem da skin */
+    max-height: 70px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.roulette-item .skin-name {
+    font-weight: bold;
+    white-space: nowrap; /* Evita que o texto quebre linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    width: 100%; /* Garante que o ellipsis funcione */
+}
+
+/* Cores das raridades (para o texto e talvez borda da skin) */
+.rarity-comum { color: #b0c4de; border: 1px solid #b0c4de; } /* Azul claro */
+.rarity-rara { color: #8a2be2; border: 1px solid #8a2be2; }     /* Roxo */
+.rarity-lendaria { color: #ffd700; border: 1px solid #ffd700; } /* Dourado */
+.rarity-excepcional { color: #ff4500; border: 1px solid #ff4500; } /* Laranja avermelhado */
+
+/* Estilo para a imagem dentro do item da roleta */
+.roulette-item.rarity-comum img { border: 2px solid #b0c4de; }
+.roulette-item.rarity-rara img { border: 2px solid #8a2be2; }
+.roulette-item.rarity-lendaria img { border: 2px solid #ffd700; }
+.roulette-item.rarity-excepcional img { border: 2px solid #ff4500; }
+
+/* Para a responsividade, ajuste a largura do item */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 15px;
+    .roulette-item {
+        min-width: 80px;
+        height: 100px;
     }
-
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .hero h2 {
-        font-size: 2.5em;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-
-    .case-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 2em;
-    }
-
-    .hero h2 {
-        font-size: 2em;
-    }
-
-    .btn-primary {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-
-    .featured-cases h3 {
-        font-size: 2em;
+    .roulette-item img {
+        max-width: 60px;
+        max-height: 60px;
     }
 }
