@@ -1,27 +1,26 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSGO Skins Fun</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header><h1>CSGO Skins Fun</h1></header>
-  <main>
-    <h2>Escolha uma caixa para abrir</h2>
-    <div class="caixas">
-      <div onclick="window.location.href='caixa.html?case=hydra'">
-        <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/operation_hydra.2df03e36b7720b98dd55adfddc88caa80043ac73.png" alt="Hydra Case">
-        <p>Operation Hydra Case</p>
-      </div>
-      <div onclick="window.location.href='caixa.html?case=chroma3'">
-        <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/chroma_3.1d2277db6045e786ce39fa37e5271204aeb33f3a.png" alt="Chroma 3 Case">
-        <p>Chroma 3 Case</p>
-      </div>
-    </div>
-    <br>
+  <h1>Escolha uma Caixa</h1>
+  <div class="cases">
+    <a href="caixa.html?case=hydra">
+      <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/operation_hydra.png" alt="Hydra">
+      <p>Operation Hydra Case</p>
+    </a>
+    <a href="caixa.html?case=chroma3">
+      <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_case/chroma_3.png" alt="Chroma 3">
+      <p>Chroma 3 Case</p>
+    </a>
+  </div>
+  <footer>
     <a href="inventario.html">Ver Inventário</a>
-  </main>
+  </footer>
 </body>
 </html>
